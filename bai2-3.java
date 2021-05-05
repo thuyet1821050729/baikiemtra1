@@ -46,9 +46,37 @@ public class bai2 {
 		Scanner sc;
 		sc=new Scanner(System.in);
 		int n;
-		System.out.print("nhap vao sao sp : ");
-		
-		chitietphieu ct=new chitietphieu();
+		do{
+		System.out.print("nhap vao sao so sp : ");
+		n=sc.nextInt;
+		}
+		while(n<2)
+		chitietphieu sp[n]=new chitietphieu();
+		chitietphieu tam =new chitietphieu();
+		for(int i=0;i<n;i++){
+			sp[i].nhap;
+		}
+		for(int i=0;i<n;i++){
+			sp[i].xuat;
+		}
+		int tong=0;
+		for(int i=0;i<n;i++){
+			tong = tong+sp[i].sl;
+		}
+		System.out.println("tong so luong sp la"+tong);
+		for(int i=0;i<n;i++){
+			for(int j=0;i<n;i++){
+				if(sp[i].sl>sp[j]){
+					tam=sp[i];
+					sp[i]=sp[j];
+					sp[i]=tam;
+				}
+			}
+		}
+		for(int i=0;i<n;i++){
+			sp[i].xuat;
+		}
+				
 	}
 
 }
