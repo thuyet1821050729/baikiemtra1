@@ -5,6 +5,7 @@ public class bai2 {
 		String mapn,ngaynhap,tennv;
 		Scanner sc;
 		public void nhap() {
+			try{
 			sc=new Scanner(System.in);
 			System.out.print("nhap vao ma phieu nhao : ");
 			mapn=sc.next();
@@ -12,6 +13,10 @@ public class bai2 {
 			ngaynhap=sc.next();
 			System.out.print("nhap vao ten nhan vien nhap : ");
 			tennv=sc.next();
+			}
+			catch(ArithmeticException e){
+				System.out.println("loi nhap ko dung");
+			}
 			
 		}
 		public void xuat() {
@@ -24,6 +29,7 @@ public class bai2 {
 		String masp,tensp,hsd;
 		int sl;
 		public void nhap() {
+			try{
 			System.out.print("nhap vao ma sp : ");
 			masp=sc.next();
 			System.out.print("nhap vao ten sp : ");
@@ -32,7 +38,10 @@ public class bai2 {
 			sl=sc.nextInt();
 			System.out.print("nhap vao han su dung : ");
 			hsd=sc.next();
-			
+			}
+			catch(ArithmeticException e){
+				System.out.println("nhap sai thong tin");
+			}
 			
 		}
 		public void xuat() {
